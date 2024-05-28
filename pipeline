@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                bat '''cd C:\\Users\\Administrator\\Downloads\\apache-jmeter-5.6.3\\bin 
+                jmeter -n -t C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Handson50_Downstream\\view.jmx -l C:\\Users\\Administrator\\Desktop\\results\\logresult_pipeline.jtl'''
+            }
+        }
+    }
+}
